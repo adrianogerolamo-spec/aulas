@@ -13,4 +13,20 @@ print(counted)
 
 dna3 ="UUTTAA"
 
-print(dna3.replace("U","T"))
+def change(string):
+    
+    string_list = []
+    
+    for c in string:
+        if c == "U":
+            string_list.append("T")
+        elif c == "T":
+            string_list.append("U")
+        else:
+            string_list.append(c)
+    
+    new_string = "".join(string_list)
+
+    print(new_string)
+
+change(dna3)
