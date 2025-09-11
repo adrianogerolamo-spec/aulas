@@ -30,3 +30,6 @@ def change(string):
     print(new_string)
 
 change(dna3)
+
+
+print("{:<20} 5'{}'3\n{:<20} 5'{}'3".format("original",dna3,"inv",dna3[::-1]))
