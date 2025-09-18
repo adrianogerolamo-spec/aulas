@@ -1,8 +1,14 @@
+#ex1:
 lista = ['chocolate', 'cafe', 'jogos', 'arte', 'livros']
 
 def imprimir_meio(lista):
-    meio_lista = lista[len(lista)//2]
-    print(meio_lista)
+    if len(lista)%2 != 0:
+        meio_lista = lista[len(lista)//2]
+        #// da o inteiro do valor
+        print(len(lista)//2)
+        print(meio_lista)
+    else:
+        print("numero da lista e par")
 
 imprimir_meio(lista)
 
@@ -25,9 +31,11 @@ list_copy = my_list
 print(my_list)
 list_copy.append('dddd')
 #adicionou??
+#x = y cria uma "referência mutavel"
 print(my_list)
 
 my_list2 = ['a', 'bb', 'ccc']
+# x = y.copy() e um metodo, literalmente faz uma copia do que esta na memoria da variavel y e passa para a x
 list_copy2 = my_list2.copy()
 print(my_list2)
 list_copy2.append('dddd')
@@ -44,3 +52,17 @@ for i in range(1, n + 1):
     fact *= i
 
 print(fact)
+
+contador = 1
+fact2 = 1
+
+while contador <= 1000:
+    contador += 1
+    fact2 *= contador
+
+print(fact2)
+
+#ex12:
+#https://www.w3schools.com/python/python_lists_comprehension.asp
+lista_12 = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']
+
