@@ -19,3 +19,19 @@ with open(file, 'rt') as f:
 for id in fastaDict.keys():
     print(f'id: {id}')
     print(f'fasta: {fastaDict[id]}')
+'''
+for id in fastaDict.keys():
+#    print(f'id: {id}')
+#    print(f'fasta: {fastaDict[id]}')
+    if id not in ntCounts:
+        ntCounts[id]={}
+    nt_uniq = set(fastaDict[id])
+    for nt in nt_uniq:
+        if nt not in ntCounts[id]:
+            ntCounts[id][nt] = fastaDict[id].count(nt)
+
+with open("output.txt", "w") as o:
+    for id in ntCounts:
+        o.write(f'id : {id} \n count: {ntCounts[id]} \n fasta:{fastaDict[id]}')
+
+'''
