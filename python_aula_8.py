@@ -11,5 +11,7 @@ with open("Python_08.fasta", "rt") as file:
         count += 1
     #print(len(genes))
     for gene in genes:
-        print("gene "+gene[0]+":\n"+ "A: "+str(gene[1].count('A')))
+        print(f"gene {gene[0]}:")
+        for char in "ATCG":
+            print(f"{char}: "+str(gene[1].count(char)))
         
